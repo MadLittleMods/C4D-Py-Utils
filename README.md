@@ -21,6 +21,10 @@ Open up Cinema 4D...
 ##### View the Output:
 `Scripts->Console...`
 
+##### Create a XPresso Script Node:
+In the XPresso window, Right click: `New Node->XPresso->Script->Python`
+![Adding XPresso Python Script](https://raw.github.com/MadLittleMods/C4D-Py-Utils/master/c4d-xpresso-python-script-node.png)
+
 License
 =======
 You can do what you want under the condition of:
