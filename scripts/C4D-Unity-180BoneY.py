@@ -16,18 +16,20 @@ def GetNextObject(op):
 
 # Get the next object only if it is a sibling or child
 def GetNextObjectOnlyDown(parent, op):
-	# If the object or parent are nothing then there is nothing...
-    if (op == None) or (parent == None): return None
- 
+		# If the object or parent are nothing then there is nothing...
+	if (op == None) or (parent == None): return None
+
 	# If there are children, goto the first child
-    if op.GetDown(): return op.GetDown()
- 
+	if op.GetDown(): return op.GetDown()
+
+	if op == parent: return None
+
 	# If there is no next object and there is parent that is not the overarching parent, then goto the parent
-    while not op.GetNext() and op.GetUp() and op.GetUp() != parent:
-        op = op.GetUp()
- 
+	while not op.GetNext() and op.GetUp() and op.GetUp() != parent:
+		op = op.GetUp()
+
 	# Return the next object
-    return op.GetNext()
+	return op.GetNext()
 
 	
 def UpdateOnlyObject(object, newMatrix):
